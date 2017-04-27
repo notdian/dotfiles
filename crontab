@@ -1,0 +1,3 @@
+*/20 * * * * connectToVala
+@reboot /home/dian/projects/dotfiles/scripts/batteryAlert/battery
+

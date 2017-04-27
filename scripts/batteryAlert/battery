@@ -1,0 +1,19 @@
+#!/bin/sh
+
+export DISPLAY=:0
+while true
+do
+  CHARGE=$(cat /sys/class/power_supply/BAT1/charge_now)
+  ADAPTER=$(cat /sys/class/power_supply/ADP1/online)
+  if (( $CHARGE < 400000 && $ADAPTER==0))
+	then
+		timeout 28s i3-nagbar -m "Low battery,please recharge!!" &
+    Curr=$(pwd)
+    cd $(dirname $0)
+    echo "Playing Sound"
+    play alert.wav
+    cd $Curr
+	fi	
+	sleep 30s
+done
+
