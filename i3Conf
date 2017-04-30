@@ -233,11 +233,12 @@ mode "$mode_system" {
 }
 bindsym $mod+o mode "$mode_system"
 
-#exec --no-startup-id  "nm-applet "
-exec --no-startup-id  "syndaemon -i .5 -t -d "
-exec --no-startup-id  "numlockx on"
-#exec --no-startup-id  "synapse -s"
-exec --no-startup-id  "compton -fCb --no-fading-openclose"
+#exec --no-startup-id   "nm-applet "
+exec --no-startup-id    "syndaemon -i .5 -t -d "
+exec --no-startup-id    "numlockx on"
+#exec --no-startup-id   "synapse -s"
+exec --no-startup-id    "compton -fCb --no-fading-openclose"
+exec --no-startup-id    keynav
 
 #rules
 
@@ -268,7 +269,7 @@ for_window [class="Nitrogen"] floating enable
 for_window [class="Dropbox"] floating enable
 for_window [class="Skype"] floating enable
 for_window [class="Anki"] floating enable
-
+for_window [title="Terminator Preferences"] floating enable,border normal
 
 # Firefox
 for_window [title="Library"] floating enable,border normal
