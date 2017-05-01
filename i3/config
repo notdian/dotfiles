@@ -156,6 +156,10 @@ bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume alsa_output.pci-0000_00
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo  -10%"
 bindsym XF86AudioMute exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo 1"
 
+#Password Manager
+bindsym $mod+P exec keepassx
+
+
 #sleep
 bindsym XF86Sleep exec "sudo pm-suspend"
 
@@ -168,7 +172,8 @@ bindsym $mod+Ctrl+A exec firefox
 bindsym $mod+Ctrl+S exec "firefox  --private-window"
 
 #ValaFree login
-bindsym $mod+Ctrl+I exec connectToVala 
+bindsym $mod+Ctrl+I exec connectToVala
+
 #lockscreen
 #bindsym $mod+Ctrl+L exec gnome-screensaver-command -l
 
@@ -207,25 +212,23 @@ bar {
         colors {
                 statusline	#999999
                 background	$black
-		
-
                 # Colors           	 border      	backgr.     	text
                 active_workspace	#073642 	#073642 	#696f89
-		focused_workspace 	$gray2 $gray2 #FFFFFF
-		inactive_workspace	 $gray1 $gray1 #AAAAAA
+                focused_workspace 	$gray2      $gray2      #FFFFFF
+                inactive_workspace	$gray1      $gray1      #AAAAAA
                 urgent_workspace  	$red		$red		$dark
         }
 }
 
-
-set $mode_system (l)ock,(e)logout,(s)suspend,(h)ibernate, (r)eboot, (Shift+s) shutdown
+set $mode_system (l)ock,(e)logout,(s)uspend,(h)ibernate, (r)eboot, (Shift+s) shutdown
+set $mode_system (l)ock,(e)logout,(s)uspend,(h)ibernate, (r)eboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
