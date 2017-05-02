@@ -278,6 +278,9 @@ for_window [title="Terminator Preferences"] floating enable,border normal
 for_window [title="Library"] floating enable,border normal
 for_window [title="Firefox Preferences"] floating enable,border normal
 for_window [class="(K|k)ee(W|w)eb"] floating enable
+#PaleMoon
+for_window [class="Pale moon"] border none
+for_window [class="Pale moon" window_role="pop-up"] floating enable, border normal
 
 #Nasty hack to hide autologin to VALA_Free
 for_window [class="wifiLogin"] floating enable,move workspace 9
