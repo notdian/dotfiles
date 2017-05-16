@@ -1,0 +1,7 @@
+sudo cpufreq-set -g $1 -c 1
+sudo cpufreq-set -g $1 -c 2
+sudo cpufreq-set -g $1 -c 3
+sudo cpufreq-set -g $1 -c 4
+sudo cpufreq-set -g $1 -c 5
+sudo cpufreq-set -g $1 -c 6
+sudo cpufreq-set -g $1 -c 7
