@@ -4,7 +4,7 @@ This is repo where i will push my config files
                        :::::::                    
                  :::::::::::::::::::               dian@dian
               :::::::::::::::::::::::::            OS: Slackware 
-            ::::::::cllcccccllllllll::::::         Kernel: x86_64 Linux 4.4.14
+            ::::::::cllcccccllllllll::::::         Kernel: x86_64 Linux 4.4.38
         ::::::::cl   clllccllll    oc:::::::::     Packages: 1203
        :::::::::o   lc::::::::co   oc::::::::::    Shell: zsh 5.2
       ::::::::::o    cccclc:::::clcc::::::::::::   Resolution: 1600x900
