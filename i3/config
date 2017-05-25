@@ -240,8 +240,10 @@ bindsym $mod+o mode "$mode_system"
 exec --no-startup-id    "syndaemon -i .5 -t -d "
 exec --no-startup-id    "numlockx on"
 #exec --no-startup-id   "synapse -s"
-exec --no-startup-id    "compton -fCb --no-fading-openclose"
 exec --no-startup-id    keynav
+exec --no-startup-id    "compton -fCb --no-fading-openclose"
+exec --no-startup-id    "sleep 1s && connectToVala"
+exec --no-startup-id    "hexchat --class=ircchat"
 
 #rules
 
@@ -284,3 +286,7 @@ for_window [class="Pale moon" window_role="pop-up"] floating enable, border norm
 
 #Nasty hack to hide autologin to VALA_Free
 for_window [class="wifiLogin"] floating enable,move workspace 9
+
+assign [class="ircchat"] "IRC"
+bindsym $mod+Ctrl+h workspace "IRC"
+
