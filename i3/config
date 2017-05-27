@@ -164,8 +164,8 @@ bindsym $mod+P exec keepassx
 bindsym XF86Sleep exec "sudo pm-suspend"
 
 #brightness german
-bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 1"
-bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 1"
+bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 5"
+bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 5"
 
 #App launch shortcuts
 bindsym $mod+Ctrl+A exec firefox
@@ -244,6 +244,7 @@ exec --no-startup-id    keynav
 exec --no-startup-id    "compton -fCb --no-fading-openclose"
 exec --no-startup-id    "sleep 1s && connectToVala"
 exec --no-startup-id    "hexchat --class=ircchat"
+exec --no-startup-id    "viber"
 
 #rules
 
@@ -287,6 +288,9 @@ for_window [class="Pale moon" window_role="pop-up"] floating enable, border norm
 #Nasty hack to hide autologin to VALA_Free
 for_window [class="wifiLogin"] floating enable,move workspace 9
 
+#Hexchat
 assign [class="ircchat"] "IRC"
 bindsym $mod+Ctrl+h workspace "IRC"
-
+#Viber
+assign [class="(v|V)iber(PC)?"] "Viber"
+bindsym $mod+Ctrl+v workspace "Viber"
