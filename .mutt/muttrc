@@ -1,9 +1,9 @@
 set use_envelope_from=yes
-set from="Dian Fishekqi <dianfishekqi@gmail.com>"
+set from="Dian Fishekqi <_@dianfishekqi.me>"
 set use_from=yes
 set edit_headers=yes
-set smtp_url = 'smtps://dianfishekqi@smtp.gmail.com'
-set smtp_pass ='PASSWORD_HERE'
+set smtp_url = 'smtps://_@dianfishekqi.me@smtp.domain.com'
+set smtp_pass ='PASSWORD'
 set record=""
 #set charset = "en_ca.UTF-8"
 
@@ -44,7 +44,9 @@ set status_on_top    # Status bar on top.
 push <show-version>  # Shows mutt version at startup
 
 macro index,pager I '<shell-escape> fetchmail <enter>'
-set sort=reverse-date-sent
+set sort=threads
+set sort_browser=reverse-date
+set sort_aux=reverse-date-sent
 
 set signature="~/.mutt/.signature"
 set mailcap_path="~/.mutt/mailcap"
@@ -56,4 +58,6 @@ set alias_file=~/.mutt/alias
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
+#Colors
+source ~/.mutt/colors
 
