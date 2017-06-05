@@ -17,7 +17,7 @@ if has("user_commands")
 endif
 
 " Override colorscheme from base16
-" let g:dotvim_colorscheme = 'scheme'
- let g:airline_theme = 'base16_'
-" Customize to your needs...
+let g:dotvim_colorscheme = 'moody'
 
+ cmap w!!':silent w !sudo tee %  > /dev/null'
+map <C-m> :NERDTreeToggle<CR>
