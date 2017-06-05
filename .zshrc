@@ -24,4 +24,5 @@ export EDITOR='vim'
 #def
 export DEFAULT_USER="dian"
 
+export TERM=xterm-256color
 bstat
