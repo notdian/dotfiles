@@ -44,9 +44,11 @@ set status_on_top    # Status bar on top.
 push <show-version>  # Shows mutt version at startup
 
 macro index,pager I '<shell-escape> fetchmail <enter>'
-set sort=threads
-set sort_browser=reverse-date
-set sort_aux=reverse-date-sent
+set sort_aux=last-date-received
+set sort=reverse-threads
+set strict_threads="yes"
+
+set text_flowed=yes
 
 set signature="~/.mutt/.signature"
 set mailcap_path="~/.mutt/mailcap"
@@ -61,3 +63,7 @@ alternative_order text/plain text/enriched text/html
 #Colors
 source ~/.mutt/colors
 
+#bindings
+unset collapse_unread
+bind index - collapse-thread
+bind index _ collapse-all
