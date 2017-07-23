@@ -155,6 +155,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo  +10%;pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo  0"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo  -10%"
 bindsym XF86AudioMute exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo 1"
+#for extrnal keyboard
+bindsym $mod+Ctrl+p exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo  +10%;pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo  0"
+bindsym $mod+Ctrl+o exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo  -10%"
 
 #Password Manager
 bindsym $mod+P exec keepassx
@@ -164,8 +167,8 @@ bindsym $mod+P exec keepassx
 bindsym XF86Sleep exec "sudo pm-suspend"
 
 #brightness german
-bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 5"
-bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 5"
+bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 2"
+bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 2"
 
 #App launch shortcuts
 bindsym $mod+Ctrl+A exec firefox
@@ -173,9 +176,6 @@ bindsym $mod+Ctrl+S exec "firefox  --private-window"
 
 #ValaFree login
 bindsym $mod+Ctrl+I exec connectToVala
-
-#lockscreen
-#bindsym $mod+Ctrl+L exec gnome-screensaver-command -l
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -223,7 +223,7 @@ bar {
 set $mode_system (l)ock,(e)logout,(s)uspend,(h)ibernate, (r)eboot, (Shift+s) shutdown
 set $mode_system (l)ock,(e)logout,(s)uspend,(h)ibernate, (r)eboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym l exec --no-startup-id xscreensaver-command -lock, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
@@ -242,9 +242,10 @@ exec --no-startup-id    "numlockx on"
 #exec --no-startup-id   "synapse -s"
 exec --no-startup-id    keynav
 exec --no-startup-id    "compton -fCb --no-fading-openclose"
-exec --no-startup-id    "sleep 1s && connectToVala"
+exec --no-startup-id    "xscreensaver -no-splash"
+#exec --no-startup-id    "sleep 1s && connectToVala"
 #exec --no-startup-id    "hexchat --class=ircchat"
-exec --no-startup-id    "viber"
+#exec --no-startup-id    "viber"
 
 #rules
 
