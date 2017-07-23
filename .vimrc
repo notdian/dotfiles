@@ -21,3 +21,6 @@ let g:dotvim_colorscheme = 'moody'
 
  cmap w!!':silent w !sudo tee %  > /dev/null'
 map <C-m> :NERDTreeToggle<CR>
+
+set encoding=utf-8
+set fileencoding=utf-8
