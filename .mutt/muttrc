@@ -5,7 +5,8 @@ set edit_headers=yes
 set smtp_url = 'smtps://_@dianfishekqi.me@smtp.domain.com'
 set smtp_pass ='PASSWORD'
 set record=""
-#set charset = "en_ca.UTF-8"
+set charset = "UTF-8"
+set send_charset = "us-ascii:UTF-8"
 
 # If not set in ~/.bashrc:
 
