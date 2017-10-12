@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 #Settting wallpaper before all
 exec --no-startup-id  "nitrogen --set-auto --restore"
-exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 
 exec --no-startup-id i3-msg 'workspace 2';
 set $mod Mod4
@@ -74,13 +74,14 @@ bindsym $mod+b exec i3-msg border toggle
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+ediaeresis focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -167,8 +168,11 @@ bindsym $mod+P exec keepassx
 bindsym XF86Sleep exec "sudo pm-suspend"
 
 #brightness german
-bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 2"
-bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 2"
+bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 10"
+#brightness specific
+bindsym Shift+XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 1"
+bindsym Shift+XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 1"
 
 #App launch shortcuts
 bindsym $mod+Ctrl+A exec firefox
@@ -210,13 +214,8 @@ bar {
         position bottom
         tray_output primary
         colors {
-                statusline	#999999
-                background	$black
-                # Colors           	 border      	backgr.     	text
-                active_workspace	#073642 	#073642 	#696f89
-                focused_workspace 	$gray2      $gray2      #FFFFFF
-                inactive_workspace	$gray1      $gray1      #AAAAAA
-                urgent_workspace  	$red		$red		$dark
+                background #232323
+                statusline #DCDCDC
         }
 }
 
@@ -243,6 +242,7 @@ exec --no-startup-id    "numlockx on"
 exec --no-startup-id    keynav
 exec --no-startup-id    "compton -fCb --no-fading-openclose"
 exec --no-startup-id    "xscreensaver -no-splash"
+exec --no-startup-id    "redshift -l 42.666667:21.166667"
 #exec --no-startup-id    "sleep 1s && connectToVala"
 #exec --no-startup-id    "hexchat --class=ircchat"
 #exec --no-startup-id    "viber"
@@ -255,6 +255,9 @@ for_window [class="(G|g)oogle-chrome" window_role="pop-up"] floating enable, bor
 for_window [class="(F|f)irefox"] border none
 for_window [class="(F|f)irefox" window_role="pop-up"] floating enable, border normal
 
+for_window [class="Vivaldi-stable"] border none
+for_window [class="Vivaldi-stable" window_role="pop-up"] floating enable, border normal
+
 for_window [class="Terminator"] border none
 
 
@@ -265,10 +268,10 @@ for_window [window_role="(?i)pop-up"] floating enable,border normal
 
 
 #class                  border  backgr.  text      	indicator
-client.focused            $gray1   $gray1   #FFFFFF   $gray1
-client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
-client.unfocused 	  $gray2   $gray2   #FFFFFF   #000000
-
+client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
+client.focused_inactive #333333 #5F676A #ffffff #484e50
+client.unfocused        #333333 #424242 #888888 #292d2e
+client.urgent           #C10004 #900000 #ffffff #900000
 
 
 # Aplications
