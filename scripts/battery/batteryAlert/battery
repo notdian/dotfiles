@@ -8,12 +8,10 @@ do
   if (( $CHARGE < 400000 && $ADAPTER==0))
 	then
 		timeout 28s i3-nagbar -m "Low battery,please recharge!!" &
-    Curr=$(pwd)
-    cd $(dirname $0)
-    echo "Playing Sound"
-    play alert.wav
+    #play a alert sound, slackware default
+    play /usr/share/sounds/purple/alert.wav
     cd $Curr
 	fi	
-	sleep 30s
+	sleep 50s
 done
 
