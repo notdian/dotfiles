@@ -12,6 +12,8 @@ alias la="ls -al"
 alias ll="ls -l"
 alias lt="ls -lt"
 alias please='sudo "$BASH" -c "$(history -p !!)"'
+alias technews="echo news\ {the-verge,ars-technica,mashable}\; | bash"
+alias newsed="clear; while true; do technews; sleep 5m; done"
 #fuction to retireve last modified files in a dir if no dir given lists current
 function lastMod {
 	path=""
@@ -34,6 +36,8 @@ export EDITOR='vim'
 #def
 export DEFAULT_USER="dian"
 export TERM=xterm-256color
+export IN_API_KEY="f543f8279a4345ca8b417c3e4a544623"
+
 bstat
 
-if ps -e | egrep -q 'tmux$' && [ -z ${TMUX+x} ] ; then  tmux attach; elif [ -z ${TMUX+x} ]; then tmux; fi
+if [ -z ${TMUX+x} ]; then bash -c ~/.config/default.tmux; fi
