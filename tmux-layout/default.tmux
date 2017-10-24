@@ -24,9 +24,17 @@ tmux set-window-option -g pane-base-index 1
 tmux new-window -t $SESSION:0 -k -n Email
 tmux send-keys -t ${window}.0 'mutt' Enter
 tmux new-window -t $SESSION:1 -k -n News
-tmux send-keys -t ${window}.1 'newsed' Enter
+tmux split-window -v -p 50
+tmux select-pane -t 1
+tmux split-window -h -p 50
+tmux select-pane -t 3
+tmux split-window -h -p 50
+tmux send-keys -t ${window}.1 'newsed tech hacker-news' Enter
+tmux send-keys -t ${window}.2 'newsed bbc-news' Enter
+tmux send-keys -t ${window}.3 'newsed tech ars-technica' Enter
+tmux send-keys -t ${window}.4 'newsed  new-scientist' Enter
 tmux new-window -t $SESSION:2 -k -n Music
-tmux send-keys -t ${window}.2 'cd /home/dian/music' Enter 'cmus' Enter
+tmux send-keys -t ${window}.1 'cd /home/dian/music' Enter 'cmus' Enter
 tmux new-window -t $SESSION:3 -k -n Bash
 tmux set-window-option -t $SESSION:0 automatic-rename off
 
