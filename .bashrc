@@ -48,7 +48,6 @@ export EDITOR='vim'
 #def
 export DEFAULT_USER="dian"
 export TERM=xterm-256color
-export IN_API_KEY="f543f8279a4345ca8b417c3e4a544623"
 
 bstat
 if [ -z ${TMUX+x} ] 
@@ -59,6 +58,7 @@ then
   then
     bash -c ~/.config/default.tmux; 
   else
+    echo "$respon" >> ~/.bash_history
     $respon
   fi
 fi
