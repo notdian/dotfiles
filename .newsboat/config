@@ -1,0 +1,8 @@
+browser /opt/homebrew/bin/firefox
+show-read-feeds  no
+
+ignore-article "regex:https://www.youtube.com/.*" "content =~ \"long-form to short by\""
+ignore-article "regex:https://www.youtube.com/.*" "content =~ \" this short ?\""
+ignore-article "regex:https://www.youtube.com/.*" "title =~ \"#(lowcode|shorts|short|Programming)\""
+
+ignore-mode "display"
