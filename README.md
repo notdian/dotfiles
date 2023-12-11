@@ -1,23 +1,21 @@
 # dotfiles
-This is repo where i will push my config files
+```
+                    'c.          notdian@bigScholes
+                 ,xNMM.          -----------------------------
+               .OMMMMo           OS: macOS arm64
+               OMMM0,            Host: Mac
+     .;loddo:' loolloddol;.      Kernel: *****
+   cKMMMMMMMMMMNWMMMMMMMMMM0:    Uptime: 5 days, 8 hours, 39 mins
+ .KMMMMMMMMMMMMMMMMMMMMMMMWd.    Packages: 187 (brew)
+ XMMMMMMMMMMMMMMMMMMMMMMMX.      Shell: zsh
+;MMMMMMMMMMMMMMMMMMMMMMMM:       Resolution: 2336x1510, 2560x1440
+:MMMMMMMMMMMMMMMMMMMMMMMM:       DE: Aqua
+.MMMMMMMMMMMMMMMMMMMMMMMMX.      WM: Amethyst
+ kMMMMMMMMMMMMMMMMMMMMMMMMWd.    Terminal: iTerm2
+ .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   Terminal Font: Menlo-Regular 14
+  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   CPU: Apple M2 Pro
+    kMMMMMMMMMMMMMMMMMMMMMMd     GPU: Apple M2 Pro
+     ;KMMMMMMMWXXWMMMMMMMk.      Memory: 2459MiB / 16384MiB
+       .cooc,.    .,coo:.
 
-                       :::::::                    
-                 :::::::::::::::::::               dian@dian
-              :::::::::::::::::::::::::            OS: Slackware 
-            ::::::::cllcccccllllllll::::::         Kernel: x86_64 Linux 4.4.38
-        ::::::::cl   clllccllll    oc:::::::::     Packages: 1203
-       :::::::::o   lc::::::::co   oc::::::::::    Shell: zsh 5.2
-      ::::::::::o    cccclc:::::clcc::::::::::::   Resolution: 1600x900
-      :::::::::::lc        cclccclc:::::::::::::   WM: i3
-     ::::::::::::::lcclcc          lc::::::::::::  GTK Theme: Arc-Darker
-     ::::::::::cclcc:::::lccclc     oc:::::::::::  Icon Theme: Numix-Circle
-     ::::::::::o    l::::::::::l    lc:::::::::::  Font: FontAwesome 10
-      :::::cll:o     clcllcccll     o:::::::::::   CPU: Intel Core i7-2670QM @ 8x 3.1GHz
-      :::::occ:o                  clc:::::::::::   GPU: GeForce GT 520M
-       ::::ocl:ccslclccclclccclclc:::::::::::::    RAM: 7946MiB
-        :::oclcccccccccccccllllllllllllll:::::    
-         ::lcc1lcccccccccccccccccccccccco::::     
-           ::::::::::::::::::::::::::::::::       
-             ::::::::::::::::::::::::::::         
-                ::::::::::::::::::::::            
-                     ::::::::::::                 
+```
