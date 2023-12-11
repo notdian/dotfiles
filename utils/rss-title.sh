@@ -1,0 +1,1 @@
+cat .newsboat/urls | grep youtube.com | python3 -c 'import requests,xmltodict,fileinput; print("\n".join([f"{ch} "+xmltodict.parse(requests.get(ch).content)["feed"]["title"]+" \"Youtube\"" for ch in  [line.split("\"")[0].strip() for line in fileinput.input()]]))'
