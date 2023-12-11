@@ -1,6 +1,6 @@
 # dotfiles
 ```
-                    'c.          notdian@bigScholes
+                    .c.          notdian@bigScholes
                  ,xNMM.          -----------------------------
                .OMMMMo           OS: macOS arm64
                OMMM0,            Host: Mac
