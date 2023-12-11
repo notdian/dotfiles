@@ -1,0 +1,22 @@
+# mosh
+export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
+
+alias tnet="ping 8.8.8.8"
+alias download_video="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
+alias dir=ls
+
+if type z &> /dev/null
+then
+	# cd to zoxide
+	alias cd='z'
+fi
+
+#python venv
+function venv_activate () {
+	if [ ! -d "$1:venv" ]; then
+	  echo "virutal env "${1:=venv}" does exist."
+	  return
+	fi
+	source ./${1:=venv}/bin/activate
+}
+

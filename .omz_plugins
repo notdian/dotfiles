@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# omz plugins
+plugins=(git fzf brew zoxide safe-paste web-search mosh frontend-search)
+
+export FRONTEND_SEARCH_FALLBACK='duckduckgo'
+
+
+
