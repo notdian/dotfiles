@@ -12,11 +12,15 @@ then
 fi
 
 #python venv
-function venv_activate () {
-	if [ ! -d "$1:venv" ]; then
+function venvactivate () {
+	if [ ! -d "${1:=venv}" ]; then
 	  echo "virutal env "${1:=venv}" does exist."
 	  return
 	fi
 	source ./${1:=venv}/bin/activate
+}
+venvcreate() {
+ python -m venv "${1:=venv}"
+ venvactivate $1
 }
 
