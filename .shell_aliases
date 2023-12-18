@@ -5,6 +5,12 @@ alias tnet="ping 8.8.8.8"
 alias download_video="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 alias dir=ls
 
+#always use nvim
+alias vi=nvim
+alias vim=nvim
+
+alias nb=newsboat
+
 if type z &> /dev/null
 then
 	# cd to zoxide
