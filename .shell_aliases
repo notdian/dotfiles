@@ -5,28 +5,27 @@ alias tnet="ping 8.8.8.8"
 alias download_video="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 alias dir=ls
 
-#always use nvim
-alias vi=nvim
-alias vim=nvim
-
-alias nb=newsboat
-
-if type z &> /dev/null
-then
-	# cd to zoxide
-	alias cd='z'
-fi
-
-#python venv
-function venvactivate () {
-	if [ ! -d "${1:=venv}" ]; then
-	  echo "virutal env "${1:=venv}" does exist."
-	  return
-	fi
-	source ./${1:=venv}/bin/activate
+alias_if_exists(){
+  if type $2 &> /dev/null
+  then
+  alias $1="$2"
+  fi
 }
-venvcreate() {
- python -m venv "${1:=venv}"
- venvactivate $1
+
+alias_if_exists cd z
+alias_if_exists ls eza
+alias_if_exists nb newsboat
+# always use nvim
+alias_if_exists vi nvim
+alias_if_exists vim nvim
+
+# python venv
+venvactivate () {
+  if [ ! -d "${1:=venv}" ]; then
+    echo "virutal env "${1:=venv}" does exist."
+    return
+  fi
+  source ./${1:=venv}/bin/activate
 }
+venvcreate() { python -m venv "${1:=venv}"; venvactivate $1;}
 
