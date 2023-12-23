@@ -29,3 +29,33 @@ venvactivate () {
 }
 venvcreate() { python -m venv "${1:=venv}"; venvactivate $1;}
 
+
+
+open_repo(){
+  if ! type git &> /dev/null; then
+    echo "Git is not installed or accessible."
+    return 1
+  fi
+
+  if [[ ! $(git remote) =~ origin ]]; then
+    echo "Remote 'origin' does not exist."
+    return 1
+  fi
+
+  origin=$(git remote get-url origin)
+  
+  if [[ $origin =~ "https" ]]; then
+   open $origin
+   return 0
+  fi
+
+  if [[ $origin =~ "^git@" ]]; then
+    url=$(echo $origin | sed 's/^git@//' | sed 's/.git$//' | sed '/:/s//\//')
+    open "https://$url"
+    return 0
+  fi
+
+
+  echo "Remote url start with 'git@' suffix.\n $origin"
+  return 1
+}
