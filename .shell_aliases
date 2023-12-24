@@ -12,7 +12,7 @@ alias_if_exists(){
   fi
 }
 
-alias_if_exists cd z
+#alias_if_exists cd z
 alias_if_exists ls eza
 alias_if_exists nb newsboat
 # always use nvim
