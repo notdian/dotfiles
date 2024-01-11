@@ -19,18 +19,6 @@ alias_if_exists nb newsboat
 alias_if_exists vi nvim
 alias_if_exists vim nvim
 
-# python venv
-venvactivate () {
-  if [ ! -d "${1:=venv}" ]; then
-    echo "virutal env "${1:=venv}" does exist."
-    return
-  fi
-  source ./${1:=venv}/bin/activate
-}
-venvcreate() { python -m venv "${1:=venv}"; venvactivate $1;}
-
-
-
 open_repo(){
   if ! type git &> /dev/null; then
     echo "Git is not installed or accessible."
