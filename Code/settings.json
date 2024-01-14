@@ -1,0 +1,51 @@
+{
+  // Workbench
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "GitHub Light",
+  "workbench.activityBar.location": "top",
+  "workbench.editor.enablePreview": false,
+  "workbench.settings.editor": "json",
+  "workbench.tips.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "breadcrumbs.icons": false,
+  "window.density.editorTabHeight": "compact",
+  // Editor
+  "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 16,
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "update.mode": "none",
+  "terminal.integrated.stickyScroll.enabled": false,
+  // Formatting
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[json][jsonc][javascript][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Git
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": false,
+  "git.openRepositoryInParentFolders": "always",
+  // Notebook
+  "notebook.lineNumbers": "on",
+  "notebook.output.scrolling": true,
+  "jupyter.askForKernelRestart": false,
+  // Gitlens
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.plusFeatures.enabled": false,
+  // CMake
+  "cmake.configureOnOpen": false,
+  "cmake.showOptionsMovedNotification": false,
+  "window.commandCenter": false,
+  // cSpell
+  "cSpell.dictionaries": ["python"],
+  // telemetry
+  "solidity.telemetry": false,
+  "telemetry.telemetryLevel": "off",
+  "gitlens.telemetry.enabled": false
+}
