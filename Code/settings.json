@@ -1,4 +1,6 @@
 {
+  // General
+  "update.mode": "none",
   // Workbench
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
@@ -8,8 +10,10 @@
   "workbench.settings.editor": "json",
   "workbench.tips.enabled": false,
   "workbench.layoutControl.enabled": false,
+  "workbench.enableExperiments": false,
   "breadcrumbs.icons": false,
   "window.density.editorTabHeight": "compact",
+  "window.commandCenter": false,
   // Editor
   "editor.accessibilitySupport": "off",
   "editor.minimap.enabled": false,
@@ -18,8 +22,9 @@
   "editor.fontLigatures": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "update.mode": "none",
+  // Terminal
   "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.tabs.enabled": false,
   // Formatting
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
@@ -38,12 +43,13 @@
   // Gitlens
   "gitlens.showWelcomeOnInstall": false,
   "gitlens.plusFeatures.enabled": false,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.cloudPatches.enabled": false,
   // CMake
   "cmake.configureOnOpen": false,
   "cmake.showOptionsMovedNotification": false,
-  "window.commandCenter": false,
   // cSpell
-  "cSpell.dictionaries": ["python"],
+  "cSpell.dictionaries": ["softwareTerms", "python", "typescript", "cpp"],
   // telemetry
   "solidity.telemetry": false,
   "telemetry.telemetryLevel": "off",
