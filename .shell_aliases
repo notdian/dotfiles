@@ -6,10 +6,10 @@ alias download_video="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=
 alias dir=ls
 
 alias_if_exists(){
-  if type $2 &> /dev/null
-  then
-  alias $1="$2"
-  fi
+    if type $2 &> /dev/null
+    then
+        alias $1="$2"
+    fi
 }
 
 #alias_if_exists cd z
@@ -20,30 +20,45 @@ alias_if_exists vi nvim
 alias_if_exists vim nvim
 
 open_repo(){
-  if ! type git &> /dev/null; then
-    echo "Git is not installed or accessible."
-    return 1
-  fi
-
-  if [[ ! $(git remote) =~ origin ]]; then
-    echo "Remote 'origin' does not exist."
-    return 1
-  fi
-
-  origin=$(git remote get-url origin)
-  
-  if [[ $origin =~ "https" ]]; then
-   open $origin
-   return 0
-  fi
-
-  if [[ $origin =~ "^git@" ]]; then
-    url=$(echo $origin | sed 's/^git@//' | sed 's/.git$//' | sed '/:/s//\//')
-    open "https://$url"
+    if ! type git &> /dev/null; then
+        echo "Git is not installed or accessible."
+        return 1
+    fi
+    
+    if [[ ! $(git remote) =~ origin ]]; then
+        echo "Remote 'origin' does not exist."
+        return 1
+    fi
+    
+    url=$(git remote get-url origin)
+    branch=$(git branch --show-current)
+    
+    
+    if [[ $url =~ "^git@" ]]; then
+        url=$(echo $url | sed 's/^git@//' | sed '/:/s//\//')
+        url="https://$url"
+    fi
+    
+    url=$(echo $url | sed 's/.git$//')
+    
+    if ! [[ $url =~ "https" ]]; then
+        echo "Remote url start with 'git@' or 'https://' suffix .\n $url"
+        return 1
+    fi
+    
+    
+    if [ -n $branch ]; then
+        case $url in
+            *github.com/*)
+                url="$url/tree/$branch"
+            ;;
+            *gitlab.com/*)
+                url="$url/-/tree/$branch"
+            ;;
+        esac
+    fi
+    
+    echo "Opening $url"
+    open $url
     return 0
-  fi
-
-
-  echo "Remote url start with 'git@' suffix.\n $origin"
-  return 1
 }
