@@ -30,3 +30,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Set listview as default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+# Displays have seperate spaces
+defaults write com.apple.spaces "spans-displays" -bool "true" && killall SystemUIServer
