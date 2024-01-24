@@ -19,6 +19,9 @@ alias_if_exists nb newsboat
 alias_if_exists vi nvim
 alias_if_exists vim nvim
 
+alias nbedit="nvim ~/.newsboat/urls"
+alias zshrcrefresh="source ~/.zshrc"
+
 open_repo(){
     if ! type git &> /dev/null; then
         echo "Git is not installed or accessible."

@@ -22,6 +22,7 @@
   "editor.fontLigatures": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.lineNumbers": "relative",
   // Terminal
   "terminal.integrated.stickyScroll.enabled": false,
   // Formatting
