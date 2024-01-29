@@ -20,6 +20,8 @@
   "editor.fontSize": 16,
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
+  "zenMode.fullScreen": false,
+  "zenMode.showTabs": "multiple",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.lineNumbers": "relative",
@@ -54,5 +56,9 @@
   "solidity.telemetry": false,
   "telemetry.telemetryLevel": "off",
   "gitlens.telemetry.enabled": false,
-  "window.zoomLevel": 1
+  // vim
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "window.zoomLevel": 1,
 }

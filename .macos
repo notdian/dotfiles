@@ -33,3 +33,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Displays have seperate spaces
 defaults write com.apple.spaces "spans-displays" -bool "true" && killall SystemUIServer
+
+# Don't add period on two spaces.
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
